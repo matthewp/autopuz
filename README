@@ -1,0 +1,4 @@
+Script to print the daily crossword puzzle (from the Houston Chronicle).  Use with cron to automatically get a new crossword every day.
+
+* Edit bash script to put in the name of your printer.
+* Automatically saves the puzzle solution to your home directory.
