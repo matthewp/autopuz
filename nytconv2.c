@@ -8,6 +8,7 @@
 FILE *infile;
 int width, height, j, k, ccount, mcount, anum, dnum;
 int apos, dpos;
+int solve;
 
 char inbuf[ROWSIZE];
 
@@ -35,6 +36,12 @@ void main(int argc, char *argv[])
 	printf("Usage: Acl2TeX <puzzle file>\n");
 	exit(1);
   }
+  if (argc == 3 && argv[2] == "-s") {
+    solve = 1;
+  } else {
+    solve = 0;
+  }
+
   infile = fopen(argv[1], "rb");
   if (infile == NULL) {
 	printf("Error opening %s.\n");
